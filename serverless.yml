@@ -1,0 +1,45 @@
+# service: my-service
+
+# provider:
+#   name: aws
+#   runtime: python3.9
+#   stage: dev
+#   region: us-west-1
+
+# functions:
+#   frontend:
+#     handler: app.handler
+#     events:
+#       - http:
+#           path: /
+#           method: any
+#           cors: true
+          
+#   backend:
+#     handler: main.handler
+#     events:
+#       - http:
+#           path: /api/{proxy+}
+#           method: any
+#           cors: true
+
+service: automated-restuarant-quesans
+
+provider:
+  name: aws
+  runtime: python3.10
+  region: us-west-1
+
+functions:
+  backend:
+    handler: backend/main.app
+    events:
+      - http:
+          path: /
+          method: ANY
+  frontend:
+    handler: frontend/app.handler
+    events:
+      - http:
+          path: /
+          method: ANY
