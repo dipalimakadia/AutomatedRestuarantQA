@@ -131,7 +131,7 @@ npm start
 uvicorn main:app --reload
 ```
 
-4. The FastAPI server should be running at `http://localhost:8000/`.
+4. The FastAPI server should be running at `http://127.0.0.1:8000/`.
 
 ## Contributing
 If you wish to contribute to this project, feel free to fork the repository and create a pull request with your changes. Be sure to follow the project's coding conventio
